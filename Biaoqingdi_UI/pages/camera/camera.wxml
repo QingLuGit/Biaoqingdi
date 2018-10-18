@@ -1,0 +1,11 @@
+<!--pages/camera/camera.wxml-->
+<view class="view">
+  
+  <camera class="camera" flash="off" device-position= "front">
+    <cover-view class="cover-1" bindtap="bindTakePhoto">
+      <cover-view class="cover-2">
+      </cover-view>
+    </cover-view>
+  </camera>
+  
+</view>

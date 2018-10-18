@@ -1,0 +1,10 @@
+<!--pages/start/start.wxml-->
+<view class="container">
+  <view class="emotion">
+    <text>{{emotions[emotionIndex]}}</text>
+  </view>
+  <view class="window-2">
+    <button type="primary" bindtap="bindChange">换一个</button>
+    <button type="primary" bindtap="bindTakePhoto">拍照</button>
+  </view>
+</view>

@@ -1,0 +1,19 @@
+<!--pages/result/result.wxml-->
+<view class="container">
+  <text wx:if="{{!hasResult}}">
+    Waiting...
+  </text>
+  <block wx:else>
+    <view class="emo">
+      <text>{{emotion}}</text>
+    </view>
+    <view>
+      <image src="{{tempImagePath}}" style='width: 200px; height: 288px;'></image>
+    </view>
+    <view>
+      <text style="word-break:break-all">
+        {{result}}
+      </text>
+    </view>
+  </block>
+</view>
