@@ -4,7 +4,8 @@
     "pages/logs/logs",
     "pages/start/start",
     "pages/result/result",
-    "pages/camera/camera"
+    "pages/camera/camera",
+    "pages/article/article"
   ],
   "window": {
     "backgroundTextStyle": "light",

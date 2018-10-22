@@ -1,5 +1,5 @@
 <!--pages/camera/camera.wxml-->
-<view class="view">
+<view>
   
   <camera class="camera" flash="off" device-position= "front">
     <cover-view class="cover-1" bindtap="bindTakePhoto">

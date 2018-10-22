@@ -1,6 +1,7 @@
 // pages/result/result.js
 
-const urlstr = 'http://biaoqingdiapi20181016042119.azurewebsites.net/';
+const urlstr = 'https://mitutor2018.cn:444/';
+//const urlstr = 'http://biaoqingdiapi20181016042119.azurewebsites.net/';
 
 Page({
 
@@ -11,7 +12,8 @@ Page({
     emotion: '',
     result: '',
     hasResult: false,
-    tempImagePath: ''
+    tempImagePath: '',
+    badResult: false
   },
 
   /**
@@ -23,7 +25,8 @@ Page({
       emotion: '开心',
       result: 'test',
       hasResult: true,
-      tempImagePath: options.path
+      tempImagePath: options.path,
+      badResult: true
     })
   },*/
 
@@ -32,7 +35,8 @@ Page({
     self.setData({
       emotion: options.emotion,
       result: 'Waiting...',
-      tempImagePath: options.path
+      tempImagePath: options.path,
+      badResult: false
     })
     wx.uploadFile({
       url: urlstr + '/api/scoring',
@@ -46,6 +50,12 @@ Page({
           result: JSON.parse(res.data),
           hasResult: true
         })
+        if(self.data.result.indexOf("还有一些差距") != -1)
+        {
+          self.setData({
+            badResult: true
+          })
+        }
       }
     })
   },

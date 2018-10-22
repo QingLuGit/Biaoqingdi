@@ -8,12 +8,13 @@
       <text>{{emotion}}</text>
     </view>
     <view>
-      <image src="{{tempImagePath}}" style='width: 200px; height: 288px;'></image>
+      <image src="{{tempImagePath}}" style='width: 200px; height: 317px;'></image>
     </view>
     <view>
       <text style="word-break:break-all">
         {{result}}
       </text>
+      <navigator wx:if="{{badResult}}" class="link" url = "/pages/article/article">->表情训练秘籍</navigator>
     </view>
   </block>
 </view>
